@@ -40,23 +40,23 @@ Console.WriteLine($"\nUser {userTwo.Name} is trying to increase the stock of pro
 Backend.MakeRequestToChangeStock(userTwo, StockChangeOperation.INCREASE, inventory, 1, 30);
 
 // But if userTwo wants to increase the stock of a product with a negative amount, the request will be rejected.
-Console.WriteLine($"\nUser {userTwo} is trying to increase the stock of product ID 2 by -5 units (which is wrong)");
+Console.WriteLine($"\nUser {userTwo.Name} is trying to increase the stock of product ID 2 by -5 units (which is wrong)");
 Backend.MakeRequestToChangeStock(userTwo, StockChangeOperation.INCREASE, inventory, 2, -5);
 
 // And the same happens if userTwo wants to increase the stock of a product with zero amount.}
-Console.WriteLine($"\nUser {userTwo} is trying to increase the stock of product ID 2 by 0 units (which is wrong)");
+Console.WriteLine($"\nUser {userTwo.Name} is trying to increase the stock of product ID 2 by 0 units (which is wrong)");
 Backend.MakeRequestToChangeStock(userTwo, StockChangeOperation.INCREASE, inventory, 2, 0);
 
 // Then, if userTwo wants to decrease the stock of a product (but exceeding the current quantity), the request will be rejected.
-Console.WriteLine($"\nUser {userTwo} is trying to decrease the stock of product ID 2 by 1000 units (which is wrong)");
+Console.WriteLine($"\nUser {userTwo.Name} is trying to decrease the stock of product ID 2 by 1000 units (which is wrong)");
 Backend.MakeRequestToChangeStock(userTwo, StockChangeOperation.DECREASE, inventory, 2, 1000);
 
 // The same happens if userTwo wants to decrease the stock of a product with a negative amount.
-Console.WriteLine($"\nUser {userTwo} is trying to decrease the stock of product ID 2 by -20 units (which is wrong)");
+Console.WriteLine($"\nUser {userTwo.Name} is trying to decrease the stock of product ID 2 by -20 units (which is wrong)");
 Backend.MakeRequestToChangeStock(userTwo, StockChangeOperation.DECREASE, inventory, 2, -20);
 
 // Or if userTwo wants to decrease the stock of a product with zero amount.
-Console.WriteLine($"\nUser {userTwo} is trying to decrease the stock of product ID 2 by 0 units (which is wrong)");
+Console.WriteLine($"\nUser {userTwo.Name} is trying to decrease the stock of product ID 2 by 0 units (which is wrong)");
 Backend.MakeRequestToChangeStock(userTwo, StockChangeOperation.DECREASE, inventory, 2, 0);
 
 // Finally, if userTwo decreases the stock of a product within the limits, the request will be successful.
